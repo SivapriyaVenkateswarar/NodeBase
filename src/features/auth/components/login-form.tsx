@@ -8,14 +8,14 @@ import { useForm } from "react-hook-form";
 import { toast } from "sonner";
 import { z } from "zod";
 import { authClient } from "@/lib/auth-client"
-import { Button } from "@/components/ui/button";
+import { Button } from "@/component/ui/button";
 import {
   Card,
   CardHeader,
   CardTitle,
   CardDescription,
   CardContent,
-} from "@/components/ui/card"; 
+} from "@/component/ui/card"; 
 import {
   Form,
   FormControl,
@@ -23,8 +23,8 @@ import {
   FormItem,
   FormLabel,
   FormMessage,
-} from "@/components/ui/form";
-import { Input } from "@/components/ui/input";
+} from "@/component/ui/form";
+import { Input } from "@/component/ui/input";
 
 const loginSchema = z.object({
   email: z.email("Please enter a valid email address"),
@@ -73,9 +73,11 @@ return (
           {/* OAuth Buttons */}
           <div className="flex flex-col gap-3">
             <Button variant="outline" className="w-full" disabled={isPending}>
+              <Image alt="Gthub" src="/logo/github.svg" width={20} height={20}/>
               Continue with GitHub
             </Button>
             <Button variant="outline" className="w-full" disabled={isPending}>
+              <Image alt="Google" src="/logo/google.svg" width={20} height={20}/>
               Continue with Google
             </Button>
           </div>
