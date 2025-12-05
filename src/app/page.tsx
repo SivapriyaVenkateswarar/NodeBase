@@ -3,7 +3,7 @@
 import { LogoutButton } from "./logout";
 import { useQuery, useMutation, useQueryClient } from "@tanstack/react-query";
 import { useTRPC } from "@/trpc/client";
-import { Button } from "@/component/ui/button";
+import { Button } from "@/components/ui/button";
 import { toast } from "sonner";
 
 const Page = () => {
@@ -28,8 +28,8 @@ const Page = () => {
       <div>{JSON.stringify(data, null, 2)}</div>
       <LogoutButton />
       <Button
-        disabled={create.isPending}        // boolean
-        onClick={() => create.mutate()}    // correct
+        disabled={create.isPending}        
+        onClick={() => create.mutate()}    
       >
         Create Workflow
       </Button>
