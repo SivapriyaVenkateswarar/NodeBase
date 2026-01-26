@@ -9,9 +9,11 @@ export default async function Home() {
 
   return (
     <HydrationBoundary state={dehydrate(queryClient)}>
-      <main className="flex flex-col items-center justify-center min-h-screen gap-8">
+    <main className="flex min-h-screen items-center justify-center">
+      <div className="w-full max-w-md">
         <RegisterForm />
-      </main>
+      </div>
+    </main>
     </HydrationBoundary>
   );
 }
